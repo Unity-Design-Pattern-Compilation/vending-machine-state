@@ -2,7 +2,7 @@
 {
     protected VendingMachineContext vendingMachine;
     protected int credit;
-    protected int refri;
+    protected int soda;
     protected string message;
 
     public VendingMachineContext VendingMachine {
@@ -15,16 +15,15 @@
         set { credit = value; }
     }
 
-    public int Refri {
-        get { return refri; }
-        set { refri = value; }
+    public int Soda {
+        get { return soda; }
+        set { soda = value; }
     }
 
     public string Message {
         get { return message; }
         set { message = value; }
     }
-
 
     public abstract void AddCredit(int amount);
     public abstract bool BuySoda();

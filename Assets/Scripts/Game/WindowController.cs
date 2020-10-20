@@ -25,7 +25,7 @@ public class WindowController : MonoBehaviour
 
     public string RefriText {
         get {
-            return $"{MachineContext.Refri}x";
+            return $"{MachineContext.Soda}x";
         }
     }
 

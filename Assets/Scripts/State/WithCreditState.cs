@@ -1,14 +1,11 @@
 ﻿public class WithCreditState : VendingMachineState
 {
-    public WithCreditState(VendingMachineState state) : this(state.Credit, state.Refri, state.VendingMachine)
-    {
-
-    }
+    public WithCreditState(VendingMachineState state) : this(state.Credit, state.Soda, state.VendingMachine) { }
 
     public WithCreditState(int credit, int refri, VendingMachineContext vendingMachine)
     {
         this.credit = credit;
-        this.refri = refri;
+        this.soda = refri;
         this.vendingMachine = vendingMachine;
     }
 
@@ -20,9 +17,9 @@
     public override bool BuySoda()
     {
         credit--;
-        refri--;
+        soda--;
 
-        if (refri == 0)
+        if (soda == 0)
         {
             vendingMachine._state = new NoSodaState(this);
         }
@@ -35,6 +32,6 @@
 
     public override void AddSoda()
     {
-        refri++;
+        soda++;
     }
 }

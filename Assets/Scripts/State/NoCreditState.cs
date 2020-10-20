@@ -1,11 +1,11 @@
 ﻿public class NoCreditState : VendingMachineState
 {
-    public NoCreditState(VendingMachineState state) : this(state.Credit, state.Refri, state.VendingMachine) { }
+    public NoCreditState(VendingMachineState state) : this(state.Credit, state.Soda, state.VendingMachine) { }
 
     public NoCreditState(int credit, int refri, VendingMachineContext vendingMachine)
     {
         this.credit = credit;
-        this.refri = refri;
+        this.soda = refri;
         this.vendingMachine = vendingMachine;
     }
 
@@ -17,7 +17,7 @@
 
     public override void AddSoda()
     {
-        Refri++;
+        Soda++;
     }
 
     public override bool BuySoda()
