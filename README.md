@@ -4,6 +4,7 @@ This repository has a unity project with State Design Pattern applied. I used a 
 
 # Requirements
 
+- Basic of C#
 - Good knowledge of object-oriented programming.
 
 # Explanation
