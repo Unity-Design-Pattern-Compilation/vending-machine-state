@@ -29,7 +29,7 @@ public class VendingMachineContext
 
     public bool BuyRefri()
     {
-        return _state.BuyRefri();
+        return _state.BuySoda();
     }
 
     public void AddCredit()
@@ -39,6 +39,6 @@ public class VendingMachineContext
 
     public void AddRefri()
     {
-        _state.AddRefri();
+        _state.AddSoda();
     }
 }

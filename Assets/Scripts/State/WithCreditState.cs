@@ -17,14 +17,14 @@
         credit += amount;
     }
 
-    public override bool BuyRefri()
+    public override bool BuySoda()
     {
         credit--;
         refri--;
 
         if (refri == 0)
         {
-            vendingMachine._state = new NoRefri(this);
+            vendingMachine._state = new NoSodaState(this);
         }
         else if(credit == 0)
         {
@@ -33,7 +33,7 @@
         return true;
     }
 
-    public override void AddRefri()
+    public override void AddSoda()
     {
         refri++;
     }

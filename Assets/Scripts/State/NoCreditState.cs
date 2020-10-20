@@ -15,12 +15,12 @@
         if (amount > 0) vendingMachine._state = new WithCreditState(this);
     }
 
-    public override void AddRefri()
+    public override void AddSoda()
     {
         Refri++;
     }
 
-    public override bool BuyRefri()
+    public override bool BuySoda()
     {
         message = "No credit!";
         return false;

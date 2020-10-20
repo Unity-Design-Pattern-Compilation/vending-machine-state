@@ -27,6 +27,6 @@
 
 
     public abstract void AddCredit(int amount);
-    public abstract bool BuyRefri();
-    public abstract void AddRefri();
+    public abstract bool BuySoda();
+    public abstract void AddSoda();
 }

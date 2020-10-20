@@ -1,11 +1,11 @@
-﻿public class NoRefri : VendingMachineState
+﻿public class NoSodaState : VendingMachineState
 {
-    public NoRefri(VendingMachineState state) : this(state.Credit, state.Refri, state.VendingMachine)
+    public NoSodaState(VendingMachineState state) : this(state.Credit, state.Refri, state.VendingMachine)
     {
 
     }
 
-    public NoRefri(int credit, int refri, VendingMachineContext vendingMachine)
+    public NoSodaState(int credit, int refri, VendingMachineContext vendingMachine)
     {
         this.credit = credit;
         this.refri = refri;
@@ -17,7 +17,7 @@
         message = "Can't add credit, no soda in machine";
     }
 
-    public override void AddRefri()
+    public override void AddSoda()
     {
         Refri++;
         if(Credit > 0)
@@ -29,7 +29,7 @@
         }
     }
 
-    public override bool BuyRefri()
+    public override bool BuySoda()
     {
         message = "No soda!";
         return false;
